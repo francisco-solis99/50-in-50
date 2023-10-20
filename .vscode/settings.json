@@ -1,5 +1,6 @@
 {
   "conventionalCommits.scopes": [
-    "01-expanding-cards"
+    "01-expanding-cards",
+    "02-progress-steps"
   ]
 }
