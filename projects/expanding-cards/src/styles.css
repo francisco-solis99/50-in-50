@@ -20,33 +20,40 @@ html {
   margin: 0 auto;
 }
 
+/* Card list styles */
 .cards__list {
   list-style-type: none;
   display: flex;
   gap: 0 1.5em;
-  background-color: red;
 
   & .card__item {
     flex: 1;
+    transition: all 500ms ease-in-out;
   }
 
   & .card__item:nth-child(1) {
     flex: 10;
   }
+
+  & .card__item:nth-child(1) figcaption {
+    opacity: 1;
+  }
 }
 
 
-
+/* Card styles */
 .card {
+  cursor: pointer;
   position: relative;
-  background-color: blue;
   min-height: var(--min-height-card);
   /* padding: .5em; */
   overflow: hidden;
   border-radius: 50px;
 
   & figure {
+    pointer-events: none;
     min-height: inherit;
+
     & img {
       inset: 0;
       position: absolute;
@@ -56,14 +63,14 @@ html {
     }
 
     & figcaption {
-      display: none;
+      opacity: 0;
       font-size: 1.25rem;
       position: absolute;
       left: 1.25em;
       bottom: 1.25em;
       color: white;
-
+      will-change: opacity;
+      transition: all ease-in-out 300ms;
     }
   }
-
 }
