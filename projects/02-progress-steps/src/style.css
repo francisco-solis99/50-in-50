@@ -37,9 +37,9 @@ html {
     position: absolute;
     top: 50%;
     height: var(--height-progress);
-    /* width: calc( (((100% / var(--num-steps)) + 50px)) ); */
-    will-change: background;
-    transition: all ease-in 300ms;
+    width: 0%;
+    will-change: width;
+    transition: 0.4s ease;
     background-color: var(--border-on-color);
   }
 
@@ -76,6 +76,7 @@ html {
   color: var(--font-color);
   border-radius: 100%;
   background: white;
+  transition: all ease-in 300ms;
 }
 
 
@@ -95,6 +96,7 @@ html {
     background: var(--border-on-color);
     color: white;
     cursor: pointer;
+    transition: all ease 200ms;
   }
 
   & button:disabled,
@@ -106,3 +108,8 @@ html {
 }
 
 
+@keyframes progress {
+  from {
+      width: 0;
+  }
+}
