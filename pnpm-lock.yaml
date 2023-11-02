@@ -12,13 +12,19 @@ importers:
         specifier: ^17.1.0
         version: 17.1.0
 
-  projects/02-progress-stepss:
+  projects/01-expanding-cards:
     devDependencies:
       vite:
         specifier: ^4.4.5
         version: 4.5.0
 
-  projects/expanding-cards:
+  projects/02-progress-steps:
+    devDependencies:
+      vite:
+        specifier: ^4.4.5
+        version: 4.5.0
+
+  projects/03-rotating-navigation:
     devDependencies:
       vite:
         specifier: ^4.4.5
