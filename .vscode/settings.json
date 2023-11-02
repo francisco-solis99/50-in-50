@@ -1,6 +1,7 @@
 {
   "conventionalCommits.scopes": [
     "01-expanding-cards",
-    "02-progress-steps"
+    "02-progress-steps",
+    "03-rotating-navigation"
   ]
 }
