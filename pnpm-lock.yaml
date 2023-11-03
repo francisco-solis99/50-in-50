@@ -30,6 +30,12 @@ importers:
         specifier: ^4.4.5
         version: 4.5.0
 
+  projects/04-hidden-search:
+    devDependencies:
+      vite:
+        specifier: ^4.4.5
+        version: 4.5.0
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
