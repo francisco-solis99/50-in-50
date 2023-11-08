@@ -7,7 +7,7 @@ const observerOptions = {
   threshold: '0.5'
 };
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => { // eslint-disable-line
   entries.forEach((entry) => {
     entry.target.classList.toggle('show', entry.isIntersecting);
     if (entry.isIntersecting) {
