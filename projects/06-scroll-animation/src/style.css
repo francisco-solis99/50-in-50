@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #EFEDD6;
+}
+
+#app {
+  margin: 2em 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 2.75rem;
+  text-align: center;
+}
+
+.cards__wrapper {
+  margin: 0 auto;
+  margin-block-start: 2em;
+  width: 80%;
+  display: grid;
+  gap: 2.15em;
+
+  & article.card {
+    max-width: 420px;
+    font-size: 2.5rem;
+    aspect-ratio: 16/8;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    border-radius: .35em;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+    background-color: #4682B4;
+    color: white;
+    will-change: transform;
+    transform: translateX(100px);
+    transition: all 300ms ease-in;
+    opacity: 0;
+  }
+
+  & .card:nth-of-type(even) {
+    transform: translateX(-100px);
+  }
+
+  & article.card.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
