@@ -24,8 +24,10 @@ html {
 }
 
 main {
-  padding: 2em;
+  padding: 2.5em;
   background-color: var(--color-form);
+  border-radius: .5rem;
+  min-width: 448px;
 
   & h1 {
     font-size: 2.5rem;
@@ -36,26 +38,41 @@ main {
 .login__form {
   margin-block-start: 2em;
 
+  & .login__field:not(:first-child) {
+    margin-block-start: 3.5em;
+  }
 
   & .login__field {
-    & label {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 2.5em;
 
+
+    & label {
+      font-size: 1.25rem;
+      font-weight: 500;
     }
 
     & input {
-
+      font-size: 1rem;
+      background: transparent;
+      border: 0;
+      outline: 0;
+      color: white;
+      border-block-end: 2px solid white;
     }
   }
 
   & .login__btn {
-    margin-block: 2em;
+    margin-block: 2.15em;
     width: 100%;
-    padding: 0.5rem .75rem;
+    padding: 1.25rem .75rem;
     border-radius: .25em;
     font-size: 1.15rem;
     background-color: var(--color-accent);
     color: darkslategrey;
     border: 0;
+    cursor: pointer;
   }
 
   & .login__remember {
