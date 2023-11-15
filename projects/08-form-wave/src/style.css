@@ -1,5 +1,7 @@
 :root {
-
+  --color-bg: #4682B4;
+  --color-form: #2A4E6C;
+  --color-accent: #ADD8E6;
 }
 
 * {
@@ -14,14 +16,27 @@ html {
 
 
 #app {
-
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: white;
 }
 
 main {
+  padding: 2em;
+  background-color: var(--color-form);
 
+  & h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 .login__form {
+  margin-block-start: 2em;
+
+
   & .login__field {
     & label {
 
@@ -33,11 +48,20 @@ main {
   }
 
   & .login__btn {
-
+    margin-block: 2em;
+    width: 100%;
+    padding: 0.5rem .75rem;
+    border-radius: .25em;
+    font-size: 1.15rem;
+    background-color: var(--color-accent);
+    color: darkslategrey;
+    border: 0;
   }
 
-  & .login__remeber {
+  & .login__remember {
+    font-size: 1.15rem;
     & > a {
+      color: var(--color-accent);
       text-decoration: none;
     }
   }
