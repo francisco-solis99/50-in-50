@@ -19,11 +19,13 @@ html {
 }
 
 .sounds-cards__wrapper {
+  min-height: 100vh;
+  padding: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 0 1.75em;
-  min-height: 100vh;
 }
 
 .sound-card {
