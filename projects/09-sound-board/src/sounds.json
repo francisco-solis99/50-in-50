@@ -1,0 +1,26 @@
+[
+  {
+    "name": "applause",
+    "file": "applause.mp3"
+  },
+  {
+    "name": "boo",
+    "file": "boo.mp3"
+  },
+  {
+    "name": "gasp",
+    "file": "gasp.mp3"
+  },
+  {
+    "name": "tada",
+    "file": "tada.mp3"
+  },
+  {
+    "name": "victory",
+    "file": "victory.mp3"
+  },
+  {
+    "name": "wrong",
+    "file": "wrong.mp3"
+  }
+]
