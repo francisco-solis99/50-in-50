@@ -1,25 +1,31 @@
 [
   {
+    "id": 1,
     "name": "applause",
     "file": "applause.mp3"
   },
   {
+    "id": 2,
     "name": "boo",
     "file": "boo.mp3"
   },
   {
+    "id": 3,
     "name": "gasp",
     "file": "gasp.mp3"
   },
   {
+    "id": 4,
     "name": "tada",
     "file": "tada.mp3"
   },
   {
+    "id": 5,
     "name": "victory",
     "file": "victory.mp3"
   },
   {
+    "id": 6,
     "name": "wrong",
     "file": "wrong.mp3"
   }

@@ -40,22 +40,18 @@ html {
   background-color: var(--color-card);
   color: white;
   cursor: pointer;
+  transition: scale 200ms ease-in, opacity 100ms ease-in;
 
   & > * {
     grid-area: stack;
   }
 
-  /* & .sound-card__overlay {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 400ms, visibility 0ms 400ms;
+  &:active {
+    scale: 1.05;
   }
 
-  &:hover .sound-card__overlay {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 400ms;
-    background-color: rgba(0, 0, 0, 0.8);
-  } */
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
