@@ -1,4 +1,4 @@
-const API = 'https://icanhazdadjok.com';
+const API = 'https://icanhazdadjoke.com';
 
 const jokesBtn = document.querySelector('.btn__joke');
 const jokeElement = document.querySelector('.joke');
@@ -49,6 +49,7 @@ async function getRandomJoke () {
   }
 }
 
+// Show the notification
 function showNotification (text) {
   const notificationTextEl = notification.querySelector('.notification__text');
   notificationTextEl.textContent = text;
