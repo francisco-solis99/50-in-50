@@ -43,9 +43,28 @@ main {
   }
 
   & .joke {
+    width: 100%;
     max-width: 1000px;
     font-size: 2rem;
     color: var(--text-primary-color);
+
+    & .joke__skeleton {
+      display: block;
+      width: 80%;
+      min-height: 0;
+      margin: .35em auto;
+      border-radius: .2em;
+      background-color: var(--text-secundary-color);
+      animation: skeleton-loading 1s linear infinite alternate;
+    }
+
+    & .joke__skeleton:last-child {
+      width: 70%;
+    }
+  }
+
+  & .joke.is-skeleton-visible > .joke__skeleton {
+    min-height: 30px;
   }
 
   & .btn__joke {
@@ -67,5 +86,14 @@ main {
     &:active {
       scale: 1.05;
     }
+  }
+}
+
+@keyframes skeleton-loading  {
+  0% {
+    background-color: hsl(196, 13%, 84%);
+  }
+  100% {
+    background-color: hsl(200, 15%, 92%);
   }
 }
