@@ -1,8 +1,9 @@
-const API = 'https://icanhazdadjoke.com';
+const API = 'https://icanhazdadjok.com';
 
 const jokesBtn = document.querySelector('.btn__joke');
 const jokeElement = document.querySelector('.joke');
 const jokeTextElement = jokeElement.querySelector('.joke__text');
+const notification = document.querySelector('.notification');
 
 // When load the page
 loadNewJoke();
@@ -17,7 +18,7 @@ async function loadNewJoke () {
 
   const joke = await getRandomJoke();
   if (!joke) {
-    console.log('Sorry we got some problems, try it again later');
+    showNotification('Sorry we got some problems, try it again later');
     return;
   };
   changeJoke(joke);
@@ -46,4 +47,13 @@ async function getRandomJoke () {
     console.log(error);
     return null;
   }
+}
+
+function showNotification (text) {
+  const notificationTextEl = notification.querySelector('.notification__text');
+  notificationTextEl.textContent = text;
+  notification.classList.add('visible');
+  setTimeout(() => {
+    notification.classList.remove('visible');
+  }, 5000);
 }

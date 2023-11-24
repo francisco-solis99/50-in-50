@@ -20,6 +20,35 @@ main {
   place-content: center;
   min-height: 100vh;
   background-color: var(--bg-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 0 .15em;
+  min-width: 300px;
+  padding: .5em 1em;
+  background-color: rgb(247, 133, 133);
+  border-radius: .5em;
+  top: 0;
+  right: -2px;
+  position: absolute;
+  transform: translateX(800px);
+  transition: transform ease-in 200ms;
+
+  & > .notification__icon  {
+    display: inline-block;
+  }
+
+  & > .notification__text  {
+    font-size: .75rem;
+  }
+
+}
+& .notification.visible {
+  transform: translateX(0);
 }
 
 .card__joke {
