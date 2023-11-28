@@ -1,5 +1,6 @@
 :root {
   --bg-color: #2B88F0;
+  --tag-color: #F0932B;
 }
 
 * {
@@ -22,6 +23,7 @@ html {
 main {
   width: 100%;
   min-width: 568px;
+  max-width: 768px;
   margin: 0 auto;
   color: white;
   text-align: center;
@@ -46,7 +48,21 @@ main {
     resize: none;
     form-sizing: content;
   }
-}
 
+  & ul {
+    margin-block-start: .75em;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: .75em;
+
+    & > li {
+      font-size: 1.05rem;
+      padding: .5em 1.15em;
+      border-radius: 50px;
+      background-color: var(--tag-color);
+    }
+  }
+}
 
 
