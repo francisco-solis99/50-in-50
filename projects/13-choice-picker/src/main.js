@@ -1,7 +1,7 @@
 /*
   Improve performance
   - Add only the new tags to the DOM, keep the one who were previously
-  - Change the tags text from the ones really changed
+  - Change the tags text from the ones really changed ✅
   - Delete only the ones removed from the list of tags
   - Evalute if there is not text in the textArea to does not do anything
 
@@ -15,8 +15,17 @@ const textArea = document.querySelector('textarea');
 const tagsList = document.createElement('ul');
 
 textArea.addEventListener('input', (e) => {
-  // const currentTags = document.querySelectorAll('.tag');
+  const currentTags = document.querySelectorAll('.tag');
   const tagsArr = textArea.value.split(',').filter(item => item.trim());
+
+  // if there is the same tags in the DOM than the tagsArr just change the changes on the text
+  if (tagsArr.length === currentTags.length) {
+    currentTags.forEach((tagEl, index) => {
+      const tagText = tagsArr[index];
+      if (tagEl.textContent !== tagText) tagEl.textContent = tagText;
+    });
+    return;
+  }
 
   const tags = tagsArr.map((tagText, index) => createTag(tagText));
   tagsList.replaceChildren(...tags);
