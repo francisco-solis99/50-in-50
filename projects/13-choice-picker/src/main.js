@@ -2,7 +2,7 @@
   Improve performance
   - Add only the new tags to the DOM, keep the one who were previously ✅
   - Change the tags text from the ones really changed ✅
-  - Delete only the ones removed from the list of tags
+  - Delete only the ones removed from the list of tags ✅
   - Evalute if there is not text in the textArea to does not do anything
 
   Improve code reading
@@ -40,6 +40,10 @@ textArea.addEventListener('input', (e) => {
     // Add the list to the DOM only the first time
     if (!tagsList.isConnected) container.append(tagsList);
   }
+
+  // Remove a tags
+  const tagsToRemoved = [...currentTags].filter((tag, index) => tag.textContent !== tagsArr[index]);
+  tagsToRemoved.forEach(tagEl => tagEl.remove());
 });
 
 function createTag (tag) {
