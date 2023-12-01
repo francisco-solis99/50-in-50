@@ -88,6 +88,12 @@ importers:
         specifier: ^5.0.0
         version: 5.0.2
 
+  projects/14-nav-navigation:
+    devDependencies:
+      vite:
+        specifier: ^5.0.0
+        version: 5.0.2
+
 packages:
 
   /@aashutoshrathi/word-wrap@1.2.6:
