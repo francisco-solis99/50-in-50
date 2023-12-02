@@ -27,6 +27,8 @@ main {
 }
 
 nav {
+  width: 350px;
+  height: 80px;
   padding: 1.25em 2em;
   position: absolute;
   left: 50%;
@@ -34,8 +36,10 @@ nav {
   transform: translate(-50%,-50%);
   border-radius: .25em;
   background-color: white;
+  /* overflow: hidden; */
   color: var(--text-color);
-  box-shadow: 2px 0 4px 2px rgba(0, 0, 0, .25);
+  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, .25);
+  transition: width 0.5s ease-in-out;
 
   & ul {
     display: flex;
@@ -44,15 +48,71 @@ nav {
     list-style: none;
 
     & li {
+      opacity: 1;
+      transform: rotateY(360deg);
+      transition: transform 0.6s linear, opacity 0.6s linear;
 
+      & a {
+        text-decoration: none;
+        color: var(--text-color);
+      }
     }
 
-    & li.close {
-      display: inline-flex;
-
-      & button {
+    & li:last-child {
+      & .close__button {
+        position: relative;
         border: 0;
         cursor: pointer;
+        width: 30px;
+        aspect-ratio: 1/1;
+        background-color: white;
+
+        & .line {
+          width: 20px;
+          height: 2px;
+          position: absolute;
+          top: 50%;
+          left: 20%;
+          background-color: var(--bg-color2);
+          transition: transform 0.3s linear;
+        }
+
+        & .line:first-child {
+          transform: rotate(45deg);
+        }
+        & .line:last-child {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+nav.active {
+  width: 150px;
+  & ul {
+    & li {
+      width: 0;
+      height: 0;
+      transform: rotateY(0deg);
+      opacity: 0;
+    }
+
+    & li:last-child {
+      width: auto;
+      height: auto;
+      opacity: 1;
+
+      & .close__button {
+        & .line {
+          top: calc(50% - 4px);
+        }
+        & .line:first-child {
+          transform: rotatey(0) translateY(8px);
+        }
+        & .line:last-child {
+          transform: rotatey(0);
+        }
       }
     }
   }
